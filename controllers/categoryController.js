@@ -1,8 +1,7 @@
 const { errorHandler, responseHandler } = require("../helpers/handleResponse");
 const Book = require("../models/book.Model");
-const bookAuthorRelModel = require("../models/bookAuthorRel.model");
 const Category = require("../models/category.Model");
-const CategoryBookRelation = require("../models/categoryBookRelation.Model");
+const getPaginatedDataWithRegex = require("./helpers/paginationHelper");
 
 async function addCategoryController(req, res) {
   const { name, description } = req.body;
